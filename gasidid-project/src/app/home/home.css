@@ -1,0 +1,87 @@
+body {
+    background-color: #F8F8F8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure full width and set a maximum height */
+.firstContainer {
+    max-width: 100%;
+    max-height: 1080px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style for image container */
+.bg_person img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Centering and styling text */
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Flex container for contact section */
+.contractSide {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Responsive design using media queries */
+@media (min-width: 768px) {
+    .firstContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .intro, .bg_person, .contractSide {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .intro {
+        text-align: left;
+    }
+
+    .contractSide {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 767px) {
+    .contractSide {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 390px) {
+    .firstContainer {
+        padding: 10px;
+    }
+
+    .bg_person img{
+        max-width: 40%;
+    }
+
+    .intro {
+        font-size: 0.9em;
+    }
+
+    .contractSide {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+

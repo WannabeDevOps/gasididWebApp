@@ -9,17 +9,33 @@ import linkin_logo from './homeImg/linkin.png'
 export default function MainHome() {
     return (
     <>
+
+
     {/* Page 1 Container*/}
-        <div className="bg-grey-100 min-h-full" >
-        {/* mx-auto px-4 sm:px-6 lg:px-8 py-20 */}
-        <div className="bg-home-wallpaper bg-cover bg-center w-full h-screen  flex justify-between">
+        <div className="bg-home-wallpaper bg-cover bg-center">
             
-
-
-                    <div className=" m-20">
-                        <img width={500} height={800} src="https://i.pinimg.com/originals/4a/47/ad/4a47ada349f163cc026661083e3e2b70.png" alt="Person" className="max-w-full h-auto" />
+                {/* Links */}
+                <div className="w-fullscreen h-28 bg-red-200 flex justify-evenly item-center">
+                    <div className="">
+                        
                     </div>
+                    <Link href="/" className="hover:text-orange-500">Home</Link>
+                    <Link href="/about" className="hover:text-orange-500">Certificate</Link>
+                    <Link href="/services" className="hover:text-orange-500">Skill & Tools</Link>
+                    <Link href="/services" className="hover:text-orange-500">Experience</Link>
+                    <Link href="/contacts" className="hover:text-orange-500">Contacts</Link>
+                </div>
 
+    <div className="w-full h-screen  flex justify-between items-center px-4 ">
+
+                    {/* Person */}
+                    <div className=" m-20 w-fullscreen">
+                        <img width={500} height={200} src="https://i.pinimg.com/originals/4a/47/ad/4a47ada349f163cc026661083e3e2b70.png" alt="Person" 
+                        className="h-screen object-cover" />
+                    </div>
+                    {/* Person */}
+
+                    {/* Name Introduction */}
                     <div className="md:w-1/2 mt-8 md:mt-0">
                         <div className="text-center md:text-left">
                             <p className="text-4xl font-bold text-orange-500 opacity-80">Hello I'm</p>
@@ -28,17 +44,19 @@ export default function MainHome() {
                             <p className="text-lg mb-4">I'm a full-stack web developer including DevOps and Deep learning image processing.</p>
                         </div>
                     </div>
+                    {/* Name Introduction */}
 
                     {/* SideTab */}
-                    <div className="flex flex-col md:flex-column mt-8">
+                    <div className="flex flex-col md:flex-column mt-8  space-y-5">
                             <Link href="https://github.com/EiForWork"><img className="w-16 h-16" src={github_logo.src} alt="GitHub Logo"/></Link>
                             <Link href="https://github.com/EiForWork"><img className="w-16 h-16" src={ig_logo.src} alt="Ig Logo"/></Link>
                             <Link href="https://github.com/EiForWork"><img className="w-16 h-16" src={linkin_logo.src} alt="Linkin Logo"/></Link>
                     </div>
-                    {/* SideTab End */}
+                    {/* SideTab */}
+                    
+    </div>
 
             </div>
-        </div>
     </>
     );
 }

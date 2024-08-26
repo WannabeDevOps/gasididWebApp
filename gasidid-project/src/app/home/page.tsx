@@ -5,15 +5,7 @@ import '../globals.css'
 import github_logo from './homeImg/github.png'
 import ig_logo from './homeImg/ig.png'
 import linkin_logo from './homeImg/linkin.png'
-
-import { Autoplay, Navigation, Pagination,Scrollbar, A11y} from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-
+import CardSlider from './card/page';
 
 export default function MainHome() {
     return (
@@ -147,34 +139,18 @@ export default function MainHome() {
                 <div className=""><div className="w-96 h-2 bg-mainOrg"></div></div>
             </div>
 
-            <div className="w-fullscreen h-full flex">
+            <div className="bg-red-200 w-fullscreen h-96 flex">
 
 
 
-
+            <CardSlider/>
 
 
             </div>
 
 
 
-            <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      ...
-    </Swiper>
+
 
 
 

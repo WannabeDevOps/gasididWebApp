@@ -12,8 +12,13 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-          'home-wallpaper': "url('/bgHome.jpg')", // URL relative to the public directory
+          'home-wallpaper': "url('/bgHome.jpg')",
+          'swueg' : "url('/swueg.jpg')",
         },
+        colors:{
+          'mainOrg':'#ff922e',
+          'bgGrey':'#F8F8F8',
+        }
     },
   },
   plugins: [],

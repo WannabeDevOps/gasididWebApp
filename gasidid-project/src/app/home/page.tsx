@@ -139,13 +139,13 @@ export default function MainHome() {
                 <div className=""><div className="w-96 h-2 bg-mainOrg"></div></div>
             </div>
 
-            <div className="bg-red-200 w-fullscreen h-96 flex">
+            <div className="bg-red-200 w-fullscreen h-fullscreen">
 
-
+ccc
 
             <CardSlider/>
 
-
+df
             </div>
 
 

@@ -14,6 +14,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
           'home-wallpaper': "url('/bgHome.jpg')",
           'swueg' : "url('/swueg.jpg')",
+          'keyb' : "url('/keyboard.jpg')",
         },
         colors:{
           'mainOrg':'#ff922e',

@@ -57,9 +57,9 @@ export default function MainHome() {
 
                     {/* SideTab */}
                     <div className="flex flex-col md:flex-column mt-8  space-y-5">
-                            <Link href="https://github.com/EiForWork"><img className="w-16 h-16" src={github_logo.src} alt="GitHub Logo"/></Link>
-                            <Link href="https://github.com/EiForWork"><img className="w-16 h-16" src={ig_logo.src} alt="Ig Logo"/></Link>
-                            <Link href="https://github.com/EiForWork"><img className="w-16 h-16" src={linkin_logo.src} alt="Linkin Logo"/></Link>
+                            <Link href="https://github.com/WannabeDevOps"><img className="w-16 h-16" src={github_logo.src} alt="GitHub Logo"/></Link>
+                            <Link href="https://www.instagram.com/__yyunjiin____/"><img className="w-16 h-16" src={ig_logo.src} alt="Ig Logo"/></Link>
+                            <Link href="www.linkedin.com/in/gasidid"><img className="w-16 h-16" src={linkin_logo.src} alt="Linkin Logo"/></Link>
                     </div>
                     {/* SideTab */}
         
@@ -130,36 +130,18 @@ export default function MainHome() {
 
 
     {/* Page 3 Certifications */}
-
-
+    <div className=" w-fullscreen h-fullscreen bg-bgGrey">
 
             {/* Topic */}
-            <div className="h-48 flex flex-col items-center justify-center">
+            <div className="h-48 bg-bgGrey flex flex-col items-center justify-center">
                 <h1 className="text-7xl font-bold mb-8">Certifications</h1>
                 <div className=""><div className="w-96 h-2 bg-mainOrg"></div></div>
             </div>
 
-            <div className="bg-red-200 w-fullscreen h-fullscreen">
-
-ccc
-
-            <CardSlider/>
-
-df
+            <div className="w-fullscreen h-fullscreen bg-bgGrey">
+                <CardSlider/>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    </div>
     {/* Page 3 Certifications */}
 
 

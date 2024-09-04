@@ -6,6 +6,7 @@ import github_logo from './homeImg/github.png'
 import ig_logo from './homeImg/ig.png'
 import linkin_logo from './homeImg/linkin.png'
 import CardSlider from './card/page';
+import './home.css'
 
 export default function MainHome() {
     return (
@@ -18,7 +19,7 @@ export default function MainHome() {
                 {/* Links */}
                 <div className="w-fullscreen h-28 flex justify-evenly item-center">
                     <div className="max-w-screen-xl w-full flex justify-between items-center px-4 text-2xl font-semibold">
-                        <Link href="/" className="hover:text-orange-500">Home</Link>
+                        <Link href="/" className="hover:text-orange-500 transition duration-400">Home</Link>
                         <Link href="/about" className="hover:text-orange-500">Certificate</Link>
                         <Link href="/services" className="hover:text-orange-500">Skill & Tools</Link>
                         <Link href="/services" className="hover:text-orange-500">Experience</Link>
@@ -29,7 +30,7 @@ export default function MainHome() {
                 <div className="w-full h-screen  flex justify-between items-center px-4 ">
 
                     {/* Person */}
-                    <div className=" m-20 w-fullscreen">
+                    <div className=" m-20 w-fullscreen slide-in-text">
                         <img width={500} height={200} src="https://i.pinimg.com/originals/4a/47/ad/4a47ada349f163cc026661083e3e2b70.png" alt="Person" 
                         className="h-screen object-cover" />
                     </div>
@@ -37,7 +38,7 @@ export default function MainHome() {
 
                     {/* Name Introduction */}
                     <div className="md:w-1/2 mt-8 md:mt-0">
-                        <div className="text-center md:text-left">
+                        <div className="text-center md:text-left slide-in-text">
                             <p className="text-4xl font-bold text-orange-500 opacity-80">Hello I'm</p>
                             <h1 className="text-9xl font-black mb-4">GASIDID</h1>
                             <h1 className="text-9xl font-black mb-4">CHORRAK</h1>

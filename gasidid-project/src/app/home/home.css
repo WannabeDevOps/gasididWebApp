@@ -1,0 +1,14 @@
+@keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in-text {
+    animation: slide-in-left 1.0s ease-out forwards;
+  }

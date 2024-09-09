@@ -7,18 +7,18 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
-import Image from 'next/image'; // Import Image from 'next/image'
+import Image from 'next/image';
 
 // Import the JSON data
 import dbManagement from './dbManagement.json'; // Ensure this path is correct
 
 export default function SkillTools() {
   return (
-    <div className="h-fullscreen w-fullscreen  m-8 grid grid-cols-2 grid-rows-4 gap-4 flex justify-center items-center">
-      <div className=" flex flex-col justify-center items-center">
+    <div className="h-fullscreen w-fullscreen m-8 grid grid-cols-2 grid-rows-4 gap-4 flex justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <div className="w-full flex justify-center items-center">
-          <div className="h-62 w-5/6 flex flex-col m-4 ">
-            <span className="text-3xl font-medium mb-2"> &#x2022; Database Management</span>
+          <div className="h-62 w-5/6 flex flex-col m-4">
+          <div className=""><span className="text-5xl font-bold	">&#x2022;</span> <span className="text-3xl font-medium mb-2">Database Management</span>          </div>
             <Swiper
               spaceBetween={30}
               slidesPerView={4} // Show 4 slides at a time
@@ -29,21 +29,28 @@ export default function SkillTools() {
               }}
               pagination={{
                 clickable: true, // Make pagination dots clickable
-                dynamicBullets: true, // Optionally add dynamic bullets
+                dynamicBullets: false, // Optionally add dynamic bullets
               }}
               // Removed the navigation prop to hide arrows
               modules={[Autoplay, Pagination]}
               className="bg-white rounded-xl shadow-2xl shadow-black-900"
             >
               {dbManagement.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="flex flex-col justify-center items-center">
-                    {/* Render image if pic exists */}
-                    {item.pic && (
-                      <Image src={item.pic} alt={""} className="" height={80} width={90} layout="responsive"/>
-                    )}
-                    <p className="text-xl">{item.title}</p>
-                  </div>
+                <SwiperSlide key={index} className="flex flex-col justify-center items-center">
+                  {/* Render image if pic exists */}
+                  {item.pic && (
+                    <div className="w-24 h-24 flex justify-center items-center">
+                      <Image
+                        src={item.pic}
+                        alt={item.title}
+                        className="object-cover rounded-lg"
+                        width={100} // Adjust width to fit container
+                        height={100} // Adjust height to fit container
+                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
+                      />
+                    </div>
+                  )}
+                  <p className="text-xl mt-2">{item.title}</p>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -51,10 +58,10 @@ export default function SkillTools() {
         </div>
       </div>
 
-      <div className=" flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <div className="w-full flex justify-center items-center">
-          <div className="h-62 w-5/6 flex flex-col m-4 ">
-            <span className="text-3xl font-medium mb-2"> &#x2022; Database Management</span>
+          <div className="h-62 w-5/6 flex flex-col m-4">
+            <span className="text-3xl font-medium mb-2"> &#x2022; Another Section</span>
             <Swiper
               spaceBetween={30}
               slidesPerView={4} // Show 4 slides at a time
@@ -69,24 +76,30 @@ export default function SkillTools() {
               }}
               // Removed the navigation prop to hide arrows
               modules={[Autoplay, Pagination]}
-              className="bg-white rounded-xl shadow-2xl shadow-black-900 h-80"
+              className="bg-white rounded-xl shadow-2xl shadow-black-900 h-84"
             >
               {dbManagement.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="flex flex-col justify-center items-center bg-red-200 w-full ">
-                    {/* Render image if pic exists */}
-                    {item.pic && (
-                      <Image src={item.pic} alt={""} className="w-8 object-cover rounded-lg" height={80} width={90} layout="responsive"/>
-                    )}
-                    <p className="text-xl">{item.title}</p>
-                  </div>
+                <SwiperSlide key={index} className="flex flex-col justify-center items-center bg-red-200">
+                  {/* Render image if pic exists */}
+                  {item.pic && (
+                    <div className="w-24 h-24 flex justify-center items-center">
+                      <Image
+                        src={item.pic}
+                        alt={item.title}
+                        className="object-cover rounded-lg"
+                        width={100}
+                        height={100} 
+                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
+                      />
+                    </div>
+                  )}
+                  <p className="text-xl mt-2">{item.title}</p>
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

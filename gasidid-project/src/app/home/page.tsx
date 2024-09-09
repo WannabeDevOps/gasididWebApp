@@ -6,6 +6,7 @@ import github_logo from './homeImg/github.png'
 import ig_logo from './homeImg/ig.png'
 import linkin_logo from './homeImg/linkin.png'
 import CardSlider from './card/page';
+import SkillTools from '../skillAndTools/page';
 
 export default function MainHome() {
     return (
@@ -132,7 +133,6 @@ export default function MainHome() {
     {/* Page 3 Certifications */}
     <div className=" w-fullscreen h-fullscreen bg-bgGrey">
 
-            {/* Topic */}
             <div className="h-48 bg-bgGrey flex flex-col items-center justify-center">
                 <h1 className="text-7xl font-bold mb-8">Certifications</h1>
                 <div className=""><div className="w-96 h-2 bg-mainOrg"></div></div>
@@ -143,6 +143,23 @@ export default function MainHome() {
             </div>
     </div>
     {/* Page 3 Certifications */}
+
+
+
+
+    {/* Page 4 Skill and Tools */}
+    <div className=" w-fullscreen h-fullscreen bg-bgGrey">
+
+                <div className="h-48 bg-bgGrey flex flex-col items-center justify-center">
+                    <h1 className="text-7xl font-bold mb-8">Skill & Tools</h1>
+                <div className=""><div className="w-96 h-2 bg-mainOrg"></div></div>
+            </div>
+            
+            <div className="w-fullscreen h-fullscreen bg-bgGrey">
+                <SkillTools/>
+            </div>
+    </div>
+    {/* Page 4 Skill and Tools */}
 
 
 

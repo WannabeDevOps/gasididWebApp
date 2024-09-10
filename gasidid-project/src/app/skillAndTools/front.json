@@ -1,18 +1,26 @@
 [
     {
-      "name": "HTML",
-      "Pic": ""
+      "title": "HTML",
+      "pic": "/imgSlide/htmllogo.png"
     },
     {
-      "name": "ReactJS",
-      "Pic": ""
+      "title": "ReactJS",
+      "pic": "/imgSlide/react.png"
     },
     {
-      "name": "NextJS",
-      "Pic": ""
+      "title": "NextJS",
+      "pic": "/imgSlide/nextjs.png"
     },
     {
-      "name": "Tailwind",
-      "Pic": ""
+      "title": "Tailwind",
+      "pic": "/imgSlide/tailwind.png"
+    },
+    {
+      "title": "CSS",
+      "pic": "/imgSlide/css.png"
+    },
+    {
+      "title": "TypeScript",
+      "pic": "/imgSlide/typets.png"
     }
   ]  

@@ -1,22 +1,22 @@
 [
     {
-      "name": "Springboot",
-      "Pic": ""
+      "title": "Springboot",
+      "pic": "/imgSlide/springboot.png"
     },
     {
-      "name": "NodeJS",
-      "Pic": ""
+      "title": "NodeJS",
+      "pic": "/imgSlide/nodejs.png"
     },
     {
-      "name": "GOFiber",
-      "Pic": ""
+      "title": "GOFiber",
+      "pic": "/imgSlide/gofiber.png"
     },
     {
-      "name": "Flask",
-      "Pic": ""
+      "title": "Flask",
+      "pic": "/imgSlide/flask.png"
     },
     {
-        "name": "Flask",
-        "Pic": ""
+      "title": "expressjs",
+      "pic": "/imgSlide/expressjs.png"
     }
   ]  

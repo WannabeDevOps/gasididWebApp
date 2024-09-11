@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
-import Image from 'next/image';
+import Image from "next/image";
 
 // Import the JSON data
 import dbManagement from './dbManagement.json'; // Ensure this path is correct
@@ -52,10 +52,14 @@ export default function SkillTools() {
                         src={item.pic}
                         alt={item.title}
                         className="object-cover rounded-lg"
-                        width={100} // Adjust width to fit container
-                        height={100} // Adjust height to fit container
-                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
-                      />
+                        // Adjust width to fit container
+                        width={100}
+                        // Adjust height to fit container
+                        height={100}
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                   )}
                   <p className="text-xl mt-8 font-normal">{item.title}</p>
@@ -70,52 +74,57 @@ export default function SkillTools() {
 {/* 2 */}
 
 
-<div className="flex flex-col justify-center items-center">
-        <div className="w-full flex justify-center items-center">
-          <div className="h-62 w-5/6 flex flex-col m-4">
-          <div className="flex items-center">
-            <span className="text-5xl font-bold text-gray-500	">&#x2022;</span> <span className="ml-2 text-3xl font-medium mb-2">Back-end Frameworks</span>
-          </div>
-            <Swiper
-              spaceBetween={100}
-              slidesPerView={5} // Show 4 slides at a time
-              centeredSlides={true} // Disable centering since we are showing multiple slides
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-                stopOnLastSlide: false,  // Ensure autoplay continues after the last slide
-                waitForTransition: false,  // Disable waiting for transitions to complete
-              }}
-              pagination={{
-                clickable: true, // Make pagination dots clickable
-                dynamicBullets: false, // Optionally add dynamic bullets
-              }}
-              // Removed the navigation prop to hide arrows
-              modules={[Autoplay, Pagination]}
-              className="bg-white rounded-xl drop-shadow-xl shadow-black-800"
-            >
-              {back.map((item, index) => (
-                <SwiperSlide key={index} className="flex flex-col justify-center items-center">
-                  {/* Render image if pic exists */}
-                  {item.pic && (
-                    <div className="w-24 h-24 flex justify-center items-center">
-                      <Image
-                        src={item.pic}
-                        alt={item.title}
-                        className="object-cover rounded-lg"
-                        width={100} // Adjust width to fit container
-                        height={100} // Adjust height to fit container
-                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
-                      />
-                    </div>
-                  )}
-                  <p className="text-xl mt-8 font-normal">{item.title}</p>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+  <div className="flex flex-col justify-center items-center">
+          <div className="w-full flex justify-center items-center">
+            <div className="h-62 w-5/6 flex flex-col">
+              <div className="flex items-center"> 
+                <span className="text-5xl font-bold text-gray-500	">&#x2022;</span> <span className="ml-2 text-3xl font-medium mb-2">Back-end Frameworks</span>
+              </div>
+              <Swiper
+                spaceBetween={0}
+                slidesPerView={4} // Show 4 slides at a time
+                centeredSlides={false} // Disable centering since we are showing multiple slides
+                autoplay={{
+                  delay: 1000,
+                  disableOnInteraction: false,
+                  stopOnLastSlide: false,  // Ensure autoplay continues after the last slide
+                  waitForTransition: false,  // Disable waiting for transitions to complete
+                }}
+                pagination={{
+                  clickable: true, // Make pagination dots clickable
+                  dynamicBullets: false, // Optionally add dynamic bullets
+                }}
+                // Removed the navigation prop to hide arrows
+                modules={[Autoplay, Pagination]}
+                className="bg-white rounded-xl drop-shadow-xl shadow-black-800"
+              >
+                {back.map((item, index) => (
+                  <SwiperSlide key={index} className="flex flex-col justify-center items-center">
+                    {console.log(back)}
+                    {/* Render image if pic exists */}
+                    {item.pic && (
+                      <div className="w-24 h-24 flex justify-center items-center">
+                        <Image
+                          src={item.pic}
+                          alt={item.title}
+                          className="rounded-lg"
+                          // Adjust width to fit container
+                          width={100}
+                          // Adjust height to fit container
+                          height={100}
+                          style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                          }} />
+                      </div>
+                    )}
+                    <p className="text-xl mt-8 font-normal">{item.title}</p>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
-      </div>
 
 
 {/* 3 */}
@@ -152,10 +161,14 @@ export default function SkillTools() {
                         src={item.pic}
                         alt={item.title}
                         className="object-cover rounded-lg"
-                        width={100} // Adjust width to fit container
-                        height={100} // Adjust height to fit container
-                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
-                      />
+                        // Adjust width to fit container
+                        width={100}
+                        // Adjust height to fit container
+                        height={100}
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                   )}
                   <p className="text-xl mt-8 font-normal">{item.title}</p>
@@ -201,10 +214,14 @@ export default function SkillTools() {
                         src={item.pic}
                         alt={item.title}
                         className="object-cover rounded-lg"
-                        width={100} // Adjust width to fit container
-                        height={100} // Adjust height to fit container
-                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
-                      />
+                        // Adjust width to fit container
+                        width={100}
+                        // Adjust height to fit container
+                        height={100}
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                   )}
                   <p className="text-xl mt-8 font-normal">{item.title}</p>
@@ -250,10 +267,14 @@ export default function SkillTools() {
                         src={item.pic}
                         alt={item.title}
                         className="object-cover rounded-lg"
-                        width={100} // Adjust width to fit container
-                        height={100} // Adjust height to fit container
-                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
-                      />
+                        // Adjust width to fit container
+                        width={100}
+                        // Adjust height to fit container
+                        height={100}
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                   )}
                   <p className="text-xl mt-8 font-normal">{item.title}</p>
@@ -301,10 +322,14 @@ export default function SkillTools() {
                         src={item.pic}
                         alt={item.title}
                         className="object-cover rounded-lg"
-                        width={100} // Adjust width to fit container
-                        height={100} // Adjust height to fit container
-                        layout="intrinsic" // Use intrinsic layout to avoid layout shift
-                      />
+                        // Adjust width to fit container
+                        width={100}
+                        // Adjust height to fit container
+                        height={100}
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                     </div>
                   )}
                   <p className="text-xl mt-8 font-normal">{item.title}</p>

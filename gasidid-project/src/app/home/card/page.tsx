@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './styles.css';
 import 'swiper/css/navigation';
-import Image from 'next/image';
+import Image from "next/image";
 import cryp from '../../../../public/crypto_cer.jpg'
 import '../card/custom-arrow.css'
 
@@ -45,48 +45,48 @@ export default function CardSlider() {
     },
   ];
 
-  return (
-    <>
-      <div className="m-0 p-0">
-        <Swiper
-          navigation={true}
-          slidesPerView={3}
-          spaceBetween={0}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Navigation, Pagination]}
-          className="mySwiper"
-        >
-          {certificates.map((certificate, index) => (
-            <SwiperSlide key={index} className="">
+  return <>
+    <div className="m-0 p-0">
+      <Swiper
+        navigation={true}
+        slidesPerView={3}
+        spaceBetween={0}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Navigation, Pagination]}
+        className="mySwiper"
+      >
+        {certificates.map((certificate, index) => (
+          <SwiperSlide key={index} className="">
 
-              <div className="relative bg-keyb bg-center bg-cover m-2 rounded-lg" style={{ height: "600px", width: "550px" }}>
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black opacity-75 z-0 rounded-lg shadow-2xl shadow-black-900	"></div>
-                
-            {/* Content */}
-            <div className="relative z-10 text-white text-left flex flex-col justify-between p-8 h-full">
-                  <Image
-                    src={certificate.pic}
-                    alt={certificate.title}
-                    className="w-full object-cover rounded-lg"
-                    style={{ height: '350px' }}
-                    layout="responsive"
-                  />
-                  <div className="flex flex-col flex-grow justify-between">
-                    <h2 className="text-xl font-bold mt-4">{certificate.title}</h2>
-                    <p className="text-semiBold text-grey text-base">{certificate.place}</p>
-                    <button className="w-60 h-16 rounded-lg gradient-border bg-transparent text-white">More Details &#8594;</button>
-                  </div>
+            <div className="relative bg-keyb bg-center bg-cover m-2 rounded-lg" style={{ height: "600px", width: "550px" }}>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black opacity-75 z-0 rounded-lg shadow-2xl shadow-black-900	"></div>
+              
+          {/* Content */}
+          <div className="relative z-10 text-white text-left flex flex-col justify-between p-8 h-full">
+                <Image
+                  src={certificate.pic}
+                  alt={certificate.title}
+                  className="w-full object-cover rounded-lg"
+                  sizes="100vw"
+                  style={{
+                    height: '350px',
+                    width: "100%",
+                  }} />
+                <div className="flex flex-col flex-grow justify-between">
+                  <h2 className="text-xl font-bold mt-4">{certificate.title}</h2>
+                  <p className="text-semiBold text-grey text-base">{certificate.place}</p>
+                  <button className="w-60 h-16 rounded-lg gradient-border bg-transparent text-white">More Details &#8594;</button>
                 </div>
-            </div>
+              </div>
+          </div>
 
-            </SwiperSlide>
-          ))}
+          </SwiperSlide>
+        ))}
 
-        </Swiper>
-      </div>
-    </>
-  );
+      </Swiper>
+    </div>
+  </>;
 }

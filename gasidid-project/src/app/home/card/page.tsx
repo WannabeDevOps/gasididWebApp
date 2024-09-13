@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './styles.css';
 import 'swiper/css/navigation';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import cryp from '../../../../public/crypto_cer.jpg'
 import '../card/custom-arrow.css'
 
